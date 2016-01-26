@@ -27,41 +27,59 @@ Pika is a pure-Python implementation of the AMQP 0-9-1 protocol that tries to st
 Directory tree
 --------------------------------
 |-- ebadge_msg
+
 |   |-- __init__.py
+
 |   |-- comm.py
+
 |   |-- common.py
+
 |   |-- heh_level.py
+
 |   |-- heh_level_ext.py
+
 |   `-- market_level.py
+
 |-- requirements.txt
+
 |-- test-heh-async.py
+
 |-- test-heh-blocking.py
+
 |-- test-vpp-async.py
+
 `-- test-vpp-blocking.py
 
 Directory ebadge_msg: python bindings for message-bus
+
 requirements.txt: Requirements file for pip tool. The file lists the required python package names and versions.
+
 test-heh-async.py: Example script for asynchronous RabbitMQ connection on HEH side. It uses threads for simultaneous processing consumer and publisher. It sends a load_report message as a response to each get_report message that it receives from RabbitMQ.
-test-heh-blocking.py: Example script for asynchronous RabbitMQ connection on HEH side. It waits for get_report messages in its main (and only) thread and responds with load_report.
+
 test-vpp-async.py: Example script for asynchronous RabbitMQ connection on VPP side. It uses threads for simultaneous processing consumer and publisher. It sends a get_report message every 5 seconds and prints out all load_report messages it receives.
-test-vpp-blocking.py: Example script for blocking RabbitMQ connection on VPP side. It sends one get_report message to RabbitMQ and then prints out all load_report messages it receives.
 
 Installation
 -------------------------------
 Create and virtual environment in folder env (recommended, otherwise requirements will be installed into your main Python environment)
+
 $ virtualenv env
+
 $ source env/bin/activate
 
 Install required packages with requirements file for pip
+
 $ pip install -r requirements.txt
 
 
 Usage
 --------------------------------
 All test-*.py scripts are used in the same manner:
-python test-heh-async.py <RabbitmqIP> <HehName> <Path to cert file> <Path to key file>
+
+$ python test-heh-async.py <RabbitmqIP> <HehName> <Path to cert file> <Path to key file>
+
 Example:
-python test-heh-async.py 172.21.0.35 heh-test1
+
+$ python test-heh-async.py 172.21.0.35 heh-test1
 
 To see any real message exchange, start one heh and one vpp script at the same time.
 
