@@ -3,7 +3,7 @@ eBADGE Message Bus
 
 This package contains the client side of the eBadge message bus. It consists of a Python library that manages the communication and maps the messages to/from Python objects, and a set of sample scripts that demonstrate the usage at both the Home Energy Hub (HEH) side and the Virtual Power Plant (VPP) or other controlling entity side.
 
-The server side of the message bus consists of a RabbitMQ server (version 3.5 or higher) configured as described in the document "The eBADGE Message Bus - Final Version" (eBadge project deliverable D3.2.3, available at http://www.ebadge-fp7.eu/wp-content/uploads/2015/10/eBADGE-D3.2.3-Final.pdf). For more information, please refer to the eBadge project web site at http://www.ebadge-fp7.eu .
+The server side of the message bus consists of a RabbitMQ server (version 3.5 or higher) configured as described in the document "The eBADGE Message Bus - Final Version - Project deliverable D3.2.3.pdf" in the doc folder. For more information, please refer to the eBadge project web site at http://www.ebadge-fp7.eu .
 
 
 Requirements
@@ -26,6 +26,12 @@ Pika is a pure-Python implementation of the AMQP 0-9-1 protocol that tries to st
 
 Directory tree
 --------------------------------
+|-- doc
+
+|   |-- The eBADGE Data Model Report - Final Version - Project deliverable D3.1.3.pdf
+
+|   `-- The eBADGE Message Bus - Final Version - Project deliverable D3.2.3.pdf
+
 |-- ebadge_msg
 
 |   |-- __init__.py
@@ -49,6 +55,8 @@ Directory tree
 |-- test-vpp-async.py
 
 `-- test-vpp-blocking.py
+
+Directory doc: the eBADGE project reports documenting this message bus and the data model used.
 
 Directory ebadge_msg: python bindings for message-bus
 
