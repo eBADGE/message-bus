@@ -9,17 +9,17 @@ The server side of the message bus consists of a RabbitMQ server (version 3.5 or
 Requirements
 --------------------------------
 
-- Python 2.7.X
+- Python 2.7.X:
 Python is a programming language that lets you work more quickly and integrate your systems more effectively.
 
-- Virtualenv (recommended)
+- Virtualenv (recommended):
 Virtualenv is a great piece of software. It allows to create some virtual environments that have many different versions of Python across the whole system and having different sets of libraries.
 We will create new virtual environments with virtualenv (current version:1.11.6)
 
-- pip 
+- pip:
 A tool for installing and managing Python packages.
 
-- pika (will be installed automatically by following the installation instructions below)
+- pika (will be installed automatically by following the installation instructions below):
 Pika Python AMQP Client Library
 Pika is a pure-Python implementation of the AMQP 0-9-1 protocol that tries to stay fairly independent of the underlying network support library. Pika was developed primarily for use with RabbitMQ, but should also work with other AMQP 0-9-1 brokers.
 
